@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+    background: rgb(19,14,97);
+    background: radial-gradient(ellipse farthest-side at bottom, rgba(19,14,97,1) 0%, rgba(2,9,31,1) 100%);
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    font-size: 86px;
+    background: -webkit-linear-gradient(#eee 25%, transparent 120%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+}
