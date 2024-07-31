@@ -14,6 +14,11 @@ html, body {
     padding: 5px;
 }
 
+body {
+    position: relative;
+    z-index: 1;
+}
+
 #main {
     max-width: 800px;
     margin: auto;
@@ -138,6 +143,7 @@ a.external::after {
     position: fixed;
     top: 0px;
     left: 0px;
+    pointer-events: none;
 }
 
 .star {
