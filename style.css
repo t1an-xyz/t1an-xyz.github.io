@@ -10,6 +10,7 @@ html, body {
     padding: 0px;
     color: #ddd;
     font-family: 'Inconsolata';
+    padding-bottom: 50px;
 }
 
 #main {
@@ -58,7 +59,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.card::before {
+.experiences .card::before {
     content: ' ';
     position: absolute;
     width: 40px;
@@ -68,7 +69,7 @@ h1 {
     background-color: #ccc7;
 }
 
-.card::after {
+.experiences .card::after {
     content: ' ';
     position: absolute;
     left: -48px;
@@ -89,8 +90,11 @@ h1 {
 
 .card:hover {
     scale: 1.05;
-    translate: calc((50% + 40px) * 0.05) 0px;
     background-color: #393b4b77;
+}
+
+.experiences .card:hover {
+    translate: calc((50% + 40px) * 0.05) 0px;
 }
 
 .title {
@@ -105,4 +109,21 @@ h1 {
 
 .subtitle > * {
     margin: 5px 0px;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, auto));
+}
+
+a {
+    color: dodgerblue;
+}
+
+a.external::after {
+    content: url('assets/open_in_new.svg');
+    position: relative;
+    left: 5px;
+    top: 2px;
 }
