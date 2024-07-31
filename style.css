@@ -3,19 +3,106 @@
 }
 
 html, body {
-    min-height: 100vh;
+    min-height: 100%;
     background: rgb(19,14,97);
     background: radial-gradient(ellipse farthest-side at bottom, rgba(19,14,97,1) 0%, rgba(2,9,31,1) 100%);
     background-attachment: fixed;
+    padding: 0px;
+    color: #ddd;
+    font-family: 'Inconsolata';
+}
+
+#main {
+    max-width: 800px;
+    margin: auto;
 }
 
 h1 {
-    color: white;
-    font-size: 86px;
-    background: -webkit-linear-gradient(#eee 25%, transparent 120%);
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee 30%, transparent 120%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'Inter', sans-serif;
     font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.section {
+    margin-top: 40px;
+}
+
+.section > h2 {
+    font-size: 36px;
+    border-bottom: #ccc7 1px solid;
+}
+
+.experiences {
+    position: relative;
+    padding: 0px;
+}
+
+.experiences::before {
+    content: ' ';
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    height: calc(100% + 20px);
+    width: 1px;
+    background-color: #ccc7;
+}
+
+.experiences > li {
+    list-style: none;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.card::before {
+    content: ' ';
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    top: 31.5px;
+    left: -40px;
+    background-color: #ccc7;
+}
+
+.card::after {
+    content: ' ';
+    position: absolute;
+    left: -48px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    background-color: #ccc;
+    border-radius: 8px;
+}
+
+.card {
+    backdrop-filter: saturate(180%) blur(10px);
+    background-color: #1e1f2977;
+    padding: 20px;
+    border-radius: 10px;
+    transition: scale 0.25s, translate 0.25s, background-color 0.25s;
+}
+
+.card:hover {
+    scale: 1.05;
+    translate: calc((50% + 40px) * 0.05) 0px;
+    background-color: #393b4b77;
+}
+
+.title {
+    margin: 0px;
+}
+
+.subtitle {
+    display: flex;
+    justify-content: space-between;
+    color: #bbb;
+}
+
+.subtitle > * {
+    margin: 5px 0px;
 }
